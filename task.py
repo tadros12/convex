@@ -22,14 +22,18 @@ def convexication(points):
 plot = px.scatter(x=X.values[:, 0], y=X.values[:, 1], color=y)
 plot.show()
 
+
 print("is the data set convex?:", is_convex_dataset(X.values[:, :2]))
 
 convex_hull_points = convexication(X.values[:, :2])
 
 
+
 plot = px.scatter(x=X.values[:, 0], y=X.values[:, 1], color=y)
 plot.add_scatter(x=convex_hull_points[:, 0], y=convex_hull_points[:, 1], mode='lines+markers', name='Convex Hull')
 plot.show()
+
+
 
 
 print("is the data set convex?:", is_convex_dataset(convex_hull_points[:, :2]))
